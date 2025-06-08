@@ -45,3 +45,6 @@ public:
         return arr;
     }
 }
+
+// TC = O(NlogN)
+// SC = O(N)
