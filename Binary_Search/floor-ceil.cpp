@@ -41,3 +41,6 @@ public:
         return {floor, ceil};
     }
 };
+
+// Time Complexity:The time complexity is O(log n) because both `findFloor` and `findCeil` use binary search, each taking O(log n) time.
+// Space Complexity:The space complexity is O(1) because the algorithm uses a constant amount of extra space.
