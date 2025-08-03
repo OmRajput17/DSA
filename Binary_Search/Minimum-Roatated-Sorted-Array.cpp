@@ -22,3 +22,6 @@ public:
         return ans;
     }
 };
+
+// Time Complexity:The time complexity is O(log n) because it performs a binary search.
+// Space Complexity:The space complexity is O(1) because it uses a constant amount of extra space.
