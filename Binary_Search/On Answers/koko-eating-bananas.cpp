@@ -36,3 +36,6 @@ public:
         return low;
     }
 };
+
+// Time Complexity:O(nlogm) where n is the size of nums and m is the maximum element in nums.
+// Space Complexity:O(1)
