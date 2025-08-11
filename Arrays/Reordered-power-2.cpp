@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+
 class Solution {
 // private:
 //     string getSorted(int n){
@@ -10,7 +12,7 @@ public:
     // void buildset(){
     //     // 2^p -> 2^0 to 2^29
     //     // convert to string
-    //     // sort it and store it in set
+    //  // sort it and store it in set
     //     for(int p = 0; p<=29; p++){
     //         string s = to_string(1<<p);
     //         sort(s.begin(), s.end());
