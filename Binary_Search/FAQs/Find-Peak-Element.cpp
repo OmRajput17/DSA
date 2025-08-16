@@ -17,7 +17,7 @@ public:
                 return mid;
             }
             if(arr[mid]>arr[mid-1]) {
-                low = mid+1;
+                low = mid+1; //Element on the RHS
             }
             else {
                 high = mid -1;
