@@ -109,12 +109,78 @@ Node* deleteEl(Node* &head, int el) {
     }
     return head;
 }
+
+Node* insertHead(Node* &head, int val){
+    Node* temp = new Node(val, head);
+    return temp;
+}
+
+Node* insertTail(Node* &head, int val){
+    if(head==NULL){
+        return new Node(val);
+    }
+    Node* temp = head;
+    while(temp->next != NULL){
+        temp = temp -> next;
+    }
+    Node* newNode = new Node(val);
+    temp->next = newNode;
+    return head;
+}
+
+Node* insertK(Node* &head, int k, int val){
+    if(head == NULL){
+        if(k==1){
+            return new Node(val);
+        }
+    }
+    if(k == 1){
+        Node* temp = new Node(val, head);
+        return temp;
+    }
+    int cnt = 0;
+    Node* temp = head;
+    while(temp != NULL){
+        cnt++;
+        if(cnt == k-1){
+            Node* X = new Node(val);
+            X -> next = temp -> next;
+            temp -> next = X;
+            return head;
+        }
+        temp = temp -> next;
+    }
+    return head;
+}
+
+Node* insertBeforeValue(Node* &head, int k, int val){
+    if(head == NULL){
+        return NULL;
+    }
+    if(head->data == val){
+        return new Node(k, head);
+    }
+
+    Node* temp = head;
+    while(temp->next != NULL){
+
+        if(temp->next->data == val){
+            Node* X = new Node(k);
+            X -> next = temp -> next;
+            temp -> next = X;
+            return head;
+        }
+        temp = temp -> next;
+    }
+    return head;
+}
+
 int main(){
     vector<int> arr = {22, 5, 8, 7};
 
     Node* head = convertArr2LL(arr);
     
-    head = deleteEl(head, 8);
+    head = insertBeforeValue(head, 1, 22);
     print(head);
     // Node* y = new Node(arr[1], nullptr);
     // cout<< y->next;
